@@ -40,7 +40,9 @@
 
 		<div class="copyright">
 			<div class="container">
-				<?php get_template_part( 'modules/copyright' ); ?>
+				<!-- //<?php get_template_part( 'modules/copyright' ); ?> -->
+				<p>&copy; 春日地区クラス代表者会議</p>
+
 			<!-- end .container --></div>
 		<!-- end .copyright --></div>
 		<?php do_action( 'habakiri_after_footer_content' ); ?>
