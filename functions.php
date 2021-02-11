@@ -673,5 +673,33 @@ class Habakiri_Base_Functions {
 		}
 		return $breakpoint;
 	}
+	
 
 }
+
+//ログイン画面のロゴ変更
+function login_logo() {
+  echo '<style type="text/css">
+    #login h1 a {
+      background: url('.get_template_directory_uri().'/image/t-kura.png) no-repeat top center;
+      background-size:100% auto;
+      width: 80px; //ログインの幅
+    }
+    body{
+      background: url('.get_template_directory_uri().'/image/sakura-slash.jpg) no-repeat top center;
+      background-size: cover;
+    }
+	body.login div#login form#loginform p.submit input#wp-submit {
+	background: #4E2279;
+	box-shadow: none;
+	text-shadow: none;
+	}
+	.login #backtoblog a, .login #nav a {
+    text-decoration: none;
+    color: #fff;
+	padding:5px;
+	background:#4E2279;
+	}
+  </style>';
+}
+add_action('login_head', 'login_logo');
