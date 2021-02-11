@@ -7,6 +7,7 @@ require_once get_template_directory() . '/inc/class.slider.php';
 require_once get_template_directory() . '/inc/class.habakiri-customizer-framework.php';
 require_once get_template_directory() . '/inc/customizer.php';
 
+
 function habakiri_parent_theme_setup() {
 	if ( !class_exists( 'Habakiri' ) ) {
 		class Habakiri extends Habakiri_Base_Functions {
@@ -18,6 +19,7 @@ function habakiri_parent_theme_setup() {
 	$Habakiri = new Habakiri();
 }
 add_action( 'after_setup_theme', 'habakiri_parent_theme_setup', 99999 );
+add_theme_support('custom-logo');
 
 /**
  * Name       : Habakiri_Base_Functions
@@ -596,6 +598,7 @@ class Habakiri_Base_Functions {
 	 *
 	 * @param int|null $post_id
 	 */
+	
 	public static function the_title( $post_id = null ) {
 		global $wp_query;
 		$post    = get_post( $post_id );
@@ -670,4 +673,5 @@ class Habakiri_Base_Functions {
 		}
 		return $breakpoint;
 	}
+
 }

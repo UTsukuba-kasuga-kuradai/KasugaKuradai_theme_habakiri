@@ -15,6 +15,8 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); echo '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>" type="text/css" />
+
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.min.js"></script>
 	<![endif]-->
@@ -33,7 +35,13 @@
 		<div class="container">
 			<div class="row header__content">
 				<div class="col-xs-10 <?php echo esc_attr( $site_branding_size ); ?> header__col">
-					<?php get_template_part( 'modules/site-branding' ); ?>
+				<?php
+					the_custom_logo();
+					if (!has_custom_logo()) {
+						get_template_part( 'modules/site-branding' ); 
+					}
+					?>
+					<!-- <?php // get_template_part( 'modules/site-branding' ); ?> -->
 				<!-- end .header__col --></div>
 				<div class="col-xs-2 <?php echo esc_attr( $gnav_size ); ?> header__col global-nav-wrapper clearfix">
 					<?php get_template_part( 'modules/gnav' ); ?>

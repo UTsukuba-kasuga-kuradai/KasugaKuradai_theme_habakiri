@@ -1,8 +1,8 @@
 /*!
-Theme Name: habakiri
-Theme URI: http://habakiri.2inc.org/en/
-Author: inc2734
-Author URI: http://2inc.org
+Theme Name: KasugaKuradai Theme2020
+Theme URI: https://github.com/UTsukuba-kasuga-kuradai/KasugaKuradai_theme_habakiri
+Author: Univ. of Tsukuba Kasuga Area Class Represeentative Meeting, Japan
+Author URI: https://www.stb.tsukuba.ac.jp/~kasuga-campus
 Description: Habakiri is the simple theme based on Bootstrap 3. This theme's goal is to create a responsive, bootstrap based WordPress theme quickly. The design is very simple, easy to create of child theme. Features are, 100% responsive layouts, the Glyphicons, Genericons, Font Awesome icons, 7 page templates, 8 header design patterns, many color settings, a lot of hooks, related posts, minified CSS and JavaScript, Sass and PHP Class in functions.php.
 Version: 2.5.2
 Text Domain: habakiri
@@ -301,10 +301,12 @@ div.thumbnail {
  * header
  *================================================*/
 .header {
+  box-shadow: none!important; /* !important外したい*/
   position: relative;
-  z-index: 3; }
+  z-index: 3; 
+  }
   .header--fixed, .header.header--fixed--is_scrolled {
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); }
+  }
   .header--default .global-nav .menu, .header--transparency .global-nav .menu {
     float: right; }
   .header--center .global-nav {
@@ -330,6 +332,8 @@ div.thumbnail {
     right: 0;
     left: 0; }
   .header--fixed--is_scrolled {
+    /* overflow: auto; */
+    /* box-shadow: 0 0 2px rgba(0, 0, 0, 0.2); */
     position: fixed; }
 
 .admin-bar .header--fixed.header--fixed--is_scrolled {
