@@ -16,6 +16,7 @@ Tags: white, fixed-layout, fluid-layout, responsive-layout, one-column, two-colu
  * classes
  *================================================*/
 .page-header {
+  display: none;
   background-position: center center;
   background-size: cover;
   margin: 0;
@@ -459,9 +460,14 @@ div.thumbnail {
 /**
  * .footer-widget-area
  */
+.footer{
+  display: none;
+  background-color: #fff!important;
+  color: #0a0a0a!important;
+}
 .footer-widget-area {
-  font-size: 12px;
-  padding: 60px 0 25px; }
+  font-size: 15px;
+  padding: 100px 0 25px; }
 
 .footer-widget__title {
   font-size: 18px;
@@ -487,7 +493,7 @@ div.thumbnail {
       padding: 0;
       position: relative; }
       .social-nav ul li a {
-        color: #fff;
+        color: #000;
         display: block;
         width: 16px;
         height: 16px;
@@ -551,12 +557,13 @@ div.thumbnail {
  * .copyright
  */
 .copyright {
-  background-color: #0a0a0a;
-  color: #393939;
-  font-size: 12px;
+  background-color: #fff;
+  color: #0a0a0a;
+  font-size: 15px;
   padding: 15px 0; }
   .copyright a {
-    color: #444; }
+    color: #0a0a0a;
+    }
 
 /*==================================================
  * commentarea
