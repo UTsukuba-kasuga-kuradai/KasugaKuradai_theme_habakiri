@@ -35,6 +35,7 @@
 		<div class="container">
 			<div class="row header__content">
 				<div class="col-xs-10 <?php echo esc_attr( $site_branding_size ); ?> header__col">
+				<div class="main-logo"
 				<?php
 					the_custom_logo();
 					if (!has_custom_logo()) {
@@ -43,6 +44,7 @@
 					?>
 					<!-- <?php // get_template_part( 'modules/site-branding' ); ?> -->
 				<!-- end .header__col --></div>
+				</div>
 				<div class="col-xs-2 <?php echo esc_attr( $gnav_size ); ?> header__col global-nav-wrapper clearfix">
 					<?php get_template_part( 'modules/gnav' ); ?>
 					<div id="responsive-btn"></div>

@@ -388,6 +388,9 @@ div.thumbnail {
 /**
  * .global-nav
  */
+.main-logo{
+      margin: 20px auto;
+}
 .global-nav-wrapper {
   position: relative; }
 
