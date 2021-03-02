@@ -24,9 +24,7 @@ a {
   font-size: 12pt !important;
   color: #06c;
 }
-.menu-item {
-    width: 100%;
-}
+
 
 /*==================================================
  * classes
@@ -501,8 +499,9 @@ div.thumbnail {
  * .footer-widget-area
  */
 .footer{
+  /* border-top: 0.75px solid #939393; */
   /* display: none; */
-  background-color: #fff!important;
+  background-color: #f9f9f9!important;
   color: #333!important;
 }
 .footer-widget-area {
@@ -518,6 +517,7 @@ div.thumbnail {
  * .social-nav
  */
 .social-nav {
+  display: none;
   padding: 15px 0 0; }
   .social-nav ul {
     list-style: none;
@@ -598,7 +598,7 @@ div.thumbnail {
  */
 .copyright {
   text-align: center;
-  background-color: #fff;
+  background-color: #f9f9f9!important;
   color: #333;
   font-size: 15px;
   padding: 20px 0; }
