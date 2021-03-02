@@ -12,7 +12,7 @@
 
 <?php do_action( 'habakiri_before_global_navigation' ); ?>
 <?php if ( has_nav_menu( 'global-nav' ) ) : ?>
-<nav class="global-nav js-responsive-nav nav--hide" role="navigation">
+<nav class="global-nav js-responsive-nav nav--hide off-canvas-nav" role="navigation">
 	<?php
 	wp_nav_menu( array(
 		'theme_location' => 'global-nav',

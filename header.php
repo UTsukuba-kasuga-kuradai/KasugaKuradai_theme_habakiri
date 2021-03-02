@@ -35,11 +35,11 @@
 		<div class="container">
 			<div class="row header__content">
 				<div class="col-xs-10 <?php echo esc_attr( $site_branding_size ); ?> header__col">
-				<div class="main-logo"
+				<div class="main-logo">
 				<?php
 					the_custom_logo();
 					if (!has_custom_logo()) {
-						get_template_part( 'modules/site-branding' ); 
+						echo '<a href="'. home_url( '/' ) .'" rel="home">'. get_bloginfo( 'name' ) .'</a>'; 
 					}
 					?>
 					<!-- <?php // get_template_part( 'modules/site-branding' ); ?> -->
@@ -55,3 +55,11 @@
 	<!-- end #header --></header>
 	<div id="contents">
 		<?php do_action( 'habakiri_before_contents_content' ); ?>
+		<?php if(is_front_page() ): ?>
+			<div class="mov-top" playsinline=1 autoplay=1><div class="pattern"><?php the_custom_header_markup(); ?></div></div>
+		<?php endif; ?>
+		
+
+		<!-- <div class="header-mov-container">	 -->
+			<!-- <div class="header-mov"><?php //the_custom_header_markup(); ?></div> -->
+		<!-- </div> -->

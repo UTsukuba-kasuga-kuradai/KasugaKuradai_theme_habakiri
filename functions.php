@@ -686,7 +686,7 @@ function login_logo() {
       width: 80px; //ログインの幅
     }
     body{
-      background: url('.get_template_directory_uri().'/image/sakura-slash.jpg) no-repeat top center;
+      background: url('.get_template_directory_uri().'/image/sakura-slash.png) no-repeat top center;
       background-size: cover;
     }
 	body.login div#login form#loginform p.submit input#wp-submit {
@@ -698,8 +698,19 @@ function login_logo() {
     text-decoration: none;
     color: #fff;
 	padding:5px;
-	background:#4E2279;
+	background:#4E2279
 	}
   </style>';
 }
 add_action('login_head', 'login_logo');
+
+/* カスタムヘッダー */
+add_theme_support( 'custom-header', array(
+	'width'         => 1920,
+	'height'        => 1080,
+	'flex-width'    => true,
+	'flex-height'   => true,
+	'header-text'   => true,
+	'video'         => true, // 新機能！
+	'default-image' => get_template_directory_uri() . '/images/sakura-slash.jpg'
+) );

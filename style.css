@@ -12,9 +12,44 @@ Tags: white, fixed-layout, fluid-layout, responsive-layout, one-column, two-colu
 */
 @import url(./src/js/jquery.responsive-nav/jquery.responsive-nav.css);
 @import url(./src/js/slick/slick.css);
+
+/*****
+* Our-Custom !important
+****/
+h1 {font-size: 24pt!important;}
+h2 {font-size: 18pt!important;}
+p {font-size:12pt!important;}
+li {font-size: 12pt!important;}
+a {
+  font-size: 12pt !important;
+  color: #06c;
+}
+.menu-item {
+    width: 100%;
+}
+
 /*==================================================
  * classes
  *================================================*/
+.wp-custom-header-video-button{
+   display: none;
+ }
+.mov-top{
+   height: 35vh;
+   position: relative;
+   overflow: hidden;
+   background-image: url(image/sakura-slash.png);
+   filter: grayscale(50%);
+   z-index: 1;
+}
+.wp-custom-header{  
+   position:absolute;
+   top: -50%;
+   height: 500%;
+   width: 500%;
+   z-index: 0;
+}
+
 .page-header {
   display: none;
   background-position: center center;
@@ -301,6 +336,10 @@ div.thumbnail {
 /*==================================================
  * header
  *================================================*/
+.responsive-nav a small {
+  display: none!important;
+}
+
 .header {
   box-shadow: none!important; /* !important外したい*/
   position: relative;
@@ -310,6 +349,7 @@ div.thumbnail {
   }
   .header--default .global-nav .menu, .header--transparency .global-nav .menu {
     float: right; }
+
   .header--center .global-nav {
     text-align: center; }
     .header--center .global-nav .menu {
@@ -461,9 +501,9 @@ div.thumbnail {
  * .footer-widget-area
  */
 .footer{
-  display: none;
+  /* display: none; */
   background-color: #fff!important;
-  color: #0a0a0a!important;
+  color: #333!important;
 }
 .footer-widget-area {
   font-size: 15px;
@@ -557,12 +597,13 @@ div.thumbnail {
  * .copyright
  */
 .copyright {
+  text-align: center;
   background-color: #fff;
-  color: #0a0a0a;
+  color: #333;
   font-size: 15px;
-  padding: 15px 0; }
+  padding: 20px 0; }
   .copyright a {
-    color: #0a0a0a;
+    color: #333;
     }
 
 /*==================================================

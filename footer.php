@@ -41,7 +41,7 @@
 		<div class="copyright">
 			<div class="container">
 				<!-- //<?php get_template_part( 'modules/copyright' ); ?> -->
-				<p>&copy; 春日地区クラス代表者会議</p>
+				<?php echo '<a href="'. home_url() . '"> &copy; 春日地区クラス代表者会議</a>' ;?>
 
 			<!-- end .container --></div>
 		<!-- end .copyright --></div>
